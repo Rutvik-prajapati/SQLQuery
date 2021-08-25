@@ -130,8 +130,7 @@ FROM Employees
 WHERE Salary BETWEEN '5000' AND '8000';
 
 --8.Write a query to get the names (FirstName, LastName), Salary, PF of all the Employees (PF is calculated as 12% of salary).
-SELECT FirstName,
-      LastName,
+SELECT FirstName +' '+ LastName AS names,
 	  Salary,
 	  Salary*0.12 AS PF 
 FROM Employees
@@ -172,7 +171,7 @@ ORDER BY FirstName DESC;
 
 --12.Write a query to get the EmployeeID, names (FirstName, LastName), salary in ascending order of salary.
 SELECT EmployeeID,
-	FirstName,LastName,
+	FirstName +' '+ LastName AS names,
 	Salary
 FROM Employees
 ORDER BY Salary ASC;
